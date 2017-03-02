@@ -1,6 +1,6 @@
 # findImageBox
 
-This code will detect text area in flowchart, and applying OCR to read them. Modified based on [xiaofeng's work](https://github.com/ZephyrSails/ocrnn)
+This code will detect text area in flowchart, and applying OCR to read them. Modified based on [xiaofeng's work](https://github.com/ZephyrSails/ocrnn).
 
 # USAGE:
 
