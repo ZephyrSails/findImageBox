@@ -7,6 +7,7 @@ import sys
 import os
 import sys
 
+
 def projectionShadow(img, colSum, rowSum):
     h, w = np.shape(img)[:2]
 
@@ -168,8 +169,9 @@ def wordGrid(img):
     kernel = np.ones((7, 15), np.uint8)
     mask = cv2.dilate(mask, kernel, iterations = 1)
 
+    # return mask
     # print img, mask
-    mask = cv2.addWeighted(img, 0.38, mask, 0.62, 0)
+    # mask = cv2.addWeighted(img, 0.38, mask, 0.62, 0)
 
     # #
     # kernel = np.ones((1, 20), np.uint8)
@@ -210,18 +212,16 @@ def wordGrid(img):
     # kernel = np.ones((1, 20), np.uint8)
     # mask = cv2.dilate(mask, kernel, iterations = 1)
 
+    return mask
     plt.imshow(mask) #, cmap = 'gray')
     plt.colorbar()
     plt.show()
-
-    # drawNicely(img)
 
 
 if __name__ == '__main__':
     """
     ~ python getBox.py flowchart_data_set/flowchart1.vsd_page_1.png
     """
-
     fileName = sys.argv[1]
 
     img = cv2.imread(fileName, cv2.IMREAD_GRAYSCALE)
