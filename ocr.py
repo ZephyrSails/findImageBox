@@ -2,6 +2,7 @@ import os
 from PIL import Image
 import pytesseract
 
+
 def image2Text(cropped_image):
 	# print cropped_image
 	# img = Image.open(cropped_image)
@@ -10,6 +11,7 @@ def image2Text(cropped_image):
 	# text = pytesseract.image_to_string(cropped_image)
 	# print (text)
 	return text
+
 
 def main():
 	crop_path = './crop/'
@@ -32,6 +34,7 @@ def main():
 		print text
 		predicted_image_text_csv.write(image + '\t' + text+'\n')
 	predicted_image_text_csv.close()
+
 
 if __name__ == "__main__":
     main()

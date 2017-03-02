@@ -12,7 +12,6 @@ crop the text area: This will produce crop/ holding cropped text area from image
 
     ~ python findTextAreas.py
 
-
 apply OCR on cropped data:
 
     ~ python ocr.py

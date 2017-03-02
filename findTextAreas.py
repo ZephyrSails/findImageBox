@@ -12,7 +12,7 @@ def splitTextArea(grid, orig, fileName):
         [x, y, w, h] = cv2.boundingRect(contour)
 
         cropped = orig[y - UP : y + h + DOWN, x - LEFT: x + w + RIGHT]
-        path = 'crop/' + fileName[fileName.rfind('/') + 1:fileName.rfind('.')]+'/'
+        path = 'crop/' + fileName[fileName.rfind('/') + 1:fileName.rfind('.')] + '/'
 
         if not os.path.exists(path): os.mkdir(path)
 
