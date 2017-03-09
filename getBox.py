@@ -171,7 +171,7 @@ def wordGrid(img):
 
     # return mask
     # print img, mask
-    # mask = cv2.addWeighted(img, 0.38, mask, 0.62, 0)
+    mask = cv2.addWeighted(img, 0.38, mask, 0.62, 0)
 
     # #
     # kernel = np.ones((1, 20), np.uint8)
@@ -223,6 +223,16 @@ if __name__ == '__main__':
     ~ python getBox.py flowchart_data_set/flowchart1.vsd_page_1.png
     """
     fileName = sys.argv[1]
+    # fileName = 'flowchart_data_set/flowchart13.vsd_page_1.png'
+    # fileName = 'flowchart_data_set/flowchart91.vsd_page_1.png'
+    # fileName = 'flowchart_data_set/flowchart1.vsd_page_1.png'
 
     img = cv2.imread(fileName, cv2.IMREAD_GRAYSCALE)
-    wordGrid(img)
+
+    plt.imshow(wordGrid(img)) #, cmap = 'gray')
+    plt.colorbar()
+    plt.show()
+
+    # plt.imshow(img, cmap = 'gray')
+    # plt.colorbar()
+    # plt.show()
